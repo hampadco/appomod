@@ -1,0 +1,58 @@
+<div class="page-content-wrapper">
+
+<div class="page-content mt-3" style="margin-top: 7px !important;">
+    @if (ViewBag.ListAgent != null)
+    {
+           <br/>
+    
+                <p class="alert alert-success  p-3 m-3 text-center ">از طریق نمایندگی های زیر حساب خود را شارژ کنید </p>
+                @foreach (var item in ViewBag.ListAgent)
+                {
+
+                <div class="row m-3">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                            <p class="card-title">نام نمایندگی : @item.FirstAndLastName </p>
+                            <p class="card-text"> شماره تماس:  @item.Phone </p>
+                            @{
+                                string phone="+98"+item.Phone.Substring(1,10);
+                            }
+                             
+                            <a href='https://api.whatsapp.com/send?phone=@phone &text=سلام درخواست  شارژ حسابم رو داشتم' class="btn btn-primary form-control">درخواست شارژ حساب   </a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                }
+    }
+    else{
+        <br/>
+       
+
+
+         <p class="alert alert-success p-3 m-3 text-center mt-7">از طریق مدیریت   حساب خود را شارژ کنید </p>
+                
+                <div class="row m-3">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                          
+                            
+                            <a href='https://api.whatsapp.com/send?phone=+989940989688&text=سلام درخواست  شارژ حسابم رو داشتم' class="btn btn-primary form-control"> درخواست شارژ حساب   </a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+               
+
+    }
+
+
+
+
+</div>
+
+</div>

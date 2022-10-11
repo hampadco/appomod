@@ -1,0 +1,140 @@
+<style>
+    th, td, tr {
+        padding: 5px;
+        text-align: center !important;
+    }
+</style>
+        <div class="page-body">
+
+            <!-- Container-fluid starts-->
+            <div class="container-fluid">
+                <div class="page-header">
+                   
+                </div>
+            </div>
+
+
+             
+
+
+
+
+
+                 
+                    <div class="col-xl-12 xl-100">
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <p class="alert card shadow p-3">
+                                   تراکنش های انجام شده 
+                                </p>
+
+                              <form action="/admin/home/paystatus" method="post">
+                                   <div class="row justify-content-center  p-3" >
+
+                                            <div class="col-xxl-6 col-lg-6 col-xl-6 col-md-6 col-12">
+                                                <input name="txt" class="form-control" type="text" placeholder="نمونه تاریخ :1401/07/07">
+                                            
+
+                                            </div>
+
+                                            <div class="col-xxl-2 col-lg-2 col-xl-2 col-md-2 col-12 mt-1 ">
+                                                <button type="submit" class="btn btn-primary form-control">جستجو</button>
+
+                                            </div>
+
+                                    </div>
+                               </form>
+
+
+
+                                @* <h5>   مجموع واریزی ها: @ViewBag.Mojodi </h5> *@
+
+
+                                    
+                                    
+                                    
+                                   
+</h5>
+
+  @* search *@
+
+                                @* <div class="card-header-right">
+                                    <ul class="list-unstyled card-option">
+                                        <li><i class="icofont icofont-simple-left"></i></li>
+                                        <li><i class="view-html fa fa-code"></i></li>
+                                        <li><i class="icofont icofont-maximize full-card"></i></li>
+                                        <li><i class="icofont icofont-minus minimize-card"></i></li>
+                                        <li><i class="icofont icofont-refresh reload-card"></i></li>
+                                        <li><i class="icofont icofont-error close-card"></i></li>
+                                    </ul>
+                                </div> *@
+                            </div>
+                            <div class="card-body">
+                                <div class="user-status table-responsive latest-order-table">
+                                      <table class="table table-bordernone">
+                         <thead>
+
+                             <tr>
+                                <td scope="col">ردیف</td>
+                                <td scope="col">واریز کننده </td>
+                                <td scope="col">شماره تماس واریز کننده</td>
+                                <td scope="col">بابت </td>
+                                <td scope="col">دریافت کننده  </td>
+                                <td scope="col">شماره تماس دریافت کننده</td>
+                                @* <td scope="col">نوع عملیات</td> *@
+                                <td scope="col"> مبلغ </td>
+                                
+                                <td scope="col"> تاریخ عملیات </td>
+                                @* <td scope="col">عملیات</td> *@
+                               </tr>
+                           
+
+                        </thead>
+                        <tbody>
+                            @if(ViewBag.walet != null){
+                                int i = 1;
+                             @foreach (var item in ViewBag.walet)
+                            {
+                                <tr>
+                                <td>@i</td>
+                                <td class="font-danger">@item.sendername </td>
+                                <td class="digits"> @item.senderphone</td>
+                                <td class="digits"> @item.babat</td>
+                                 <td class="font-danger">@item.resivername </td>
+                                <td class="digits"> @item.resiverphone</td>
+                                @* <td class="digits">
+                                    @if(item.resiverphone == ViewBag.tel){
+                                        <span class="badge badge-pill badge-success p-3">واریز</span>
+                                    }
+                                    else{
+                                        <span class="badge badge-pill badge-primary p-3">برداشت</span>
+                                    }
+                                </td> *@
+                                <td class="digits"> @item.variz</td>
+                                
+                                <td class="digits"> @item.tarikh</td>
+                                  @* <td class="digits">
+                                    <a href="/admin/home/del/@item.Id" onclick="return confirm('آیا از حذف مطمن هستید؟')" class="btn btn-warning"> حذف</a>
+                                 </td> *@
+                               
+                            </tr>
+                                i++;
+                             }
+                            }
+                           
+                         
+                        </tbody>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Container-fluid Ends-->
+
+        </div>
+
+  

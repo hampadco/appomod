@@ -1,0 +1,268 @@
+@model VmMainQuestion
+
+<style>
+    .base-timer {
+        position: relative;
+        width: 60px;
+        height: 60px;
+    }
+
+    .base-timer__svg {
+        transform: scaleX(-1);
+    }
+
+    .base-timer__circle {
+        fill: none;
+        stroke: none;
+    }
+
+    .base-timer__path-elapsed {
+        stroke-width: 5px;
+        stroke: grey;
+    }
+
+    .base-timer__path-remaining {
+        stroke-width: 5px;
+        stroke-linecap: round;
+        transform: rotate(90deg);
+        transform-origin: center;
+        transition: 1s linear all;
+        fill-rule: nonzero;
+        stroke: currentColor;
+    }
+
+    .base-timer__path-remaining.green {
+        color: rgb(65, 184, 131);
+    }
+
+    .base-timer__path-remaining.orange {
+        color: orange;
+    }
+
+    .base-timer__path-remaining.red {
+        color: red;
+    }
+
+    .base-timer__label {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+    }
+
+    .white-space-nowrap {
+        white-space: nowrap;
+    }
+
+    .option {
+
+        border: 2px solid #43ccb0;
+        border-radius: 20px;
+        background-color: rgb(177 213 250 / 60%);
+        padding: 5px;
+        margin: 10px;
+        text-align: center;
+    }
+
+
+</style>
+<form action="/question/question" method="post">
+    <div class="page-content-wrapper py-3">
+        <div class="container">
+            <div class="card">
+                <div class="row justify-content-between w-100 p-1 m-0 align-self-center ">
+                    <p class="col-6 pr-2 btn btn-primary white-space-nowrap" style="border:1px solid white"><b>  امتیاز شما:  </b><b
+                            dir="ltr" style="margin-right:4px ;"> @ViewBag.rate </b></p>
+                    <p class="col-6 pr-2 btn btn-primary white-space-nowrap" style="border:1px solid white"> رتبه شما :<b
+                            dir="ltr" style="margin-right:4px ;"> @ViewBag.MyRate </b></p>
+                              <p class="col-12 pr-2 btn btn-primary white-space-nowrap" style="border:1px solid white">امتیاز نفر اول:<b
+                            dir="ltr" style="margin-right:4px ;"> 
+
+                            @if (ViewBag.Max != -999999)
+                            {
+                                @ViewBag.Max
+                            }
+                            else
+                            {
+                                <span>-</span>
+                            }
+                            
+                            
+                            </b></p>
+                </div>
+            </div>
+            <div class="card">
+
+                <div class="card-body" style="background-color:#93adb163;">
+
+                    <b style="line-height:50px;">@ViewBag.q.QuestionNumber. @ViewBag.q.Questinon</b>
+                </div>
+            </div>
+            <div class="justify-content-sm-center card p-2 m-1" id="panel">
+                <div class="option" id="d1" onclick="check(1)">
+                    <input style="display: none;" type="radio" value="1" name="UserAnswer">@ViewBag.q.Answer1
+                </div>
+                <div class="option"  id="d2" onclick="check(2)">
+                    <input  style="display: none;" type="radio" value="2" name="UserAnswer">@ViewBag.q.Answer2
+                </div>
+                <div class="option"  id="d3" onclick="check(3)">
+                    <input  style="display: none;" type="radio" value="3" name="UserAnswer">@ViewBag.q.Answer3
+                </div>
+                <div class="option"  id="d4" onclick="check(4)">
+                    <input  style="display: none;" type="radio" value="4" name="UserAnswer">@ViewBag.q.Answer4
+                </div>
+            </div>
+            <input type="text" style="display: none;"  name="id" value="@ViewBag.q.Id">
+            <input type="text"  style="display: none;" id="c" value="@ViewBag.q.CorrectAnswer">
+
+            <br>
+
+            <div class="d-flex justify-content-around mr-2 row p-3" style="background-color:white;">
+
+                <div class="col-12">
+                    <button type="submit" id="clickButton" class="btn btn-primary form-control ">بعدی</button>
+                </div>
+
+                @* // timer *@
+                <div class="col-12 mt-3" id="app" style="margin-right:260px;"></div>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+</div>
+</div>
+
+
+<script>
+    setTimeout(function() {
+    var button = document.getElementById('clickButton');
+    button.form.submit();
+    }, 15000);
+
+    </script>
+
+<script type="text/javascript" language="javascript">
+    function DisableBackButton() {
+        window.history.forward()
+    }
+    DisableBackButton();
+    window.onload = DisableBackButton;
+    window.onpageshow = function (evt) { if (evt.persisted) DisableBackButton() }
+    window.onunload = function () { void (0) }
+</script>
+
+<script>
+    var ctrlKeyDown = false;
+
+    $(document).ready(function () {
+        $(document).on("keydown", keydown);
+        $(document).on("keyup", keyup);
+    });
+
+    function keydown(e) {
+
+        if ((e.which || e.keyCode) == 116 || ((e.which || e.keyCode) == 82 && ctrlKeyDown)) {
+            // Pressing F5 or Ctrl+R
+            e.preventDefault();
+        } else if ((e.which || e.keyCode) == 17) {
+            // Pressing  only Ctrl
+            ctrlKeyDown = true;
+        }
+    };
+
+    function keyup(e) {
+        // Key up Ctrl
+        if ((e.which || e.keyCode) == 17)
+            ctrlKeyDown = false;
+    };
+
+
+
+
+
+</script>
+
+<script>
+    function check(number) {
+        var correct = new Audio('../music/correct.mp3');
+        var wrong = new Audio('../music/wrong.mp3');
+       
+       
+        var c =parseInt(document.getElementById("c").value) ;
+        if (number == 1) {
+             $("input:radio[value='1']").attr("checked", "true");
+            if(c==1){
+                 correct.play();
+                document.getElementById("d1").style.backgroundColor = "#43ccb0";
+                document.getElementById("d1").style.color = "white";
+               
+            }
+            else{
+                 wrong.play();
+                document.getElementById("d1").style.backgroundColor = "#ff0000";
+                document.getElementById("d1").style.color = "white";
+               
+            }
+            
+            
+        }
+        else if (number == 2) {
+            $("input:radio[value='2']").attr("checked", "true")
+             if(c==2){
+                 correct.play();
+                document.getElementById("d2").style.backgroundColor = "#43ccb0";
+                document.getElementById("d2").style.color = "white";
+               
+            }
+            else{
+                 wrong.play();
+                document.getElementById("d2").style.backgroundColor = "#ff0000";
+                document.getElementById("d2").style.color = "white";
+               
+            }
+        }
+        else if (number == 3) {
+            $("input:radio[value='3']").attr("checked", "true")
+             if(c==3){
+                 correct.play();
+                document.getElementById("d3").style.backgroundColor = "#43ccb0";
+                //color:white
+                document.getElementById("d3").style.color = "white";
+               
+
+            }
+            else{
+                 wrong.play();
+                document.getElementById("d3").style.backgroundColor = "#ff0000";
+                document.getElementById("d3").style.color = "white";
+               
+            }
+        }
+        else if (number == 4) {
+            $("input:radio[value='4']").attr("checked", "true")
+             if(c==4){
+                correct.play();
+                document.getElementById("d4").style.backgroundColor = "#43ccb0";
+                document.getElementById("d4").style.color = "white";
+                
+            }
+            else{
+                 wrong.play();
+                document.getElementById("d4").style.backgroundColor = "#ff0000";
+                document.getElementById("d4").style.color = "white";
+               
+            }
+        }
+        //panel disable
+        document.getElementById("panel").style.pointerEvents = "none";
+
+     
+    }
+  
+</script>
+

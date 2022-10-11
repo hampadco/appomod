@@ -1,0 +1,84 @@
+@model List<Vmresult>
+
+<div class="container ">
+  <!-- Section Heading-->
+  <div class="  align-items-center pt-3 justify-content-between rtl-flex-d-row-r alert alert-primary "
+    style="margin-top: 80px">
+       <img src="/img/core-img/discount.png" alt="" style="width:100px ;">امتیازات   تاریخ 
+       @if (DateTime.Now.Hour > 20 && DateTime.Now.Hour<24)
+       {
+        <span id="datetime"></span>
+       }
+       else{
+        <span id="Yestedaydatetime"></span>
+       }
+
+
+  </div>
+  <!-- Notifications Area-->
+  @{
+
+    int i = 1;
+
+  }
+  @foreach (var item in Model)
+  {
+
+
+    <div class="notification-area pb-2">
+      <div class="list-group">
+
+        <!-- Single Notification--><a class="list-group-item d-flex align-items-center border-0"
+        href="notification-details.html"><span class="noti-icon">@i</span>
+          <div class="noti-info row">
+            <div class="col-6">
+              <p dir="ltr" class="form-control text-center  " style="border: none;color:blue;font-size: 17px;">
+                @item.Phone.Substring(0,4)***@item.Phone.Substring(7,4) </p>
+            </div>
+
+            <div class="col-6">
+              @if (@item.Rate <= 0)
+              {
+                <p class="form-control text-center  " style="color:red;font-size: 17px;" dir="ltr">@item.Rate امتیاز</p>
+
+              }
+              else
+              {
+                <p class="form-control text-center  " style="color:green;font-size: 17px;" dir="ltr">@item.Rate امتیاز</p>
+
+              }
+
+
+
+
+
+
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+    i++;
+  }
+</div>
+<script>
+var dt = new Date().toLocaleDateString('fa-IR');
+document.getElementById("datetime").innerHTML = dt;
+</script>
+
+
+<script>
+  const today = new Date()
+const yesterday = new Date(today)
+
+yesterday.setDate(yesterday.getDate() - 1)
+
+today.toDateString()
+var y=yesterday.toLocaleDateString('fa-IR');
+document.getElementById("Yestedaydatetime").innerHTML = y;
+</script>
+
+
+
+

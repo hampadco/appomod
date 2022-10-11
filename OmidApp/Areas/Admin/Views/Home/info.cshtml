@@ -1,0 +1,111 @@
+<style>
+    tr {
+        text-align: center;
+    }
+
+    tr td {
+        text-align: center !important;
+    }
+</style>
+
+<div class="page-body">
+
+    <!-- Container-fluid starts-->
+    <div class="container-fluid">
+        <div class="page-header">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="page-header-left">
+                        <h3>اطلاعات شرکت کنندگان
+                            <small>پنل مدیریت چندکاره</small>
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <ol class="breadcrumb pull-right">
+                        <li class="breadcrumb-item"><a href="index.html"><i data-feather="home"></i></a></li>
+                        <li class="breadcrumb-item active">اطلاعات</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <form class="search-form">
+            <div class="form-group">
+                <input style="border:2px solid green; border-radius: 25px;" type="search"
+                    placeholder="جستجو کردن.." class="Form-control w-100 m-2 p-2">
+
+
+               
+                <button class="btn btn-success m-1 ">جستجو</button>
+        </form>
+    </div>
+
+    <div class="col-xl-12 xl-100">
+        <div class="card">
+
+            <div class="card-body">
+                <div class="user-status table-responsive latest-order-table">
+                    <table class="table table-bordernone">
+                        <thead>
+
+                            <tr>
+                                <td scope="col">ردیف</td>
+                                <td scope="col">نام و نام خانوادگی</td>
+                                <td scope="col">شماره تماس</td>
+                                <td scope="col">کیف پول</td>
+                                <td scope="col">جزئیات مسابقه</td>
+                                <td scope="col">تبدیل به نماینده</td>
+                               </tr>
+                            }
+
+                        </thead>
+                        <tbody>
+                            @if(ViewBag.User != null){
+                                int i = 1;
+                             @foreach (var item in ViewBag.User)
+                            {
+                                <tr>
+                                <td>@i</td>
+                                <td class="font-danger">@item.FirstAndLastName </td>
+                                <td class="digits"> @item.Phone</td>
+                                <td class="font-danger"> <a href="/admin/home/walet/@item.Id" class="btn btn-danger"> مشاهده و شارژ کیف پول</a>
+                                </td>
+                                <td class="font-danger">
+                                    <a href="/admin/home/details/@item.Id" class="btn btn-warning">جزئیات مسابقه</a>
+                                </td>
+                                <td class="font-danger">
+                                     @if (item.Cart == "agent")
+                                                            {
+                                                                <a href="/admin/home/agentinfo/@item.Id" class="btn btn-success form-control">
+                                                                             <span >نماینده</span>
+
+                                                                </a>
+                                                            }
+                                                            else
+                                                            {
+                                                                <a href="/admin/home/agentinfo/@item.Id" class="btn btn-danger form-control">
+                                                                <span >کاربر عادی</span>
+                                                                </a>
+                                                            }
+                                </td>
+                            </tr>
+                                i++;
+                             }
+                            }
+                           
+                         
+                        </tbody>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Container-fluid Ends-->
+
+</div>
+
+

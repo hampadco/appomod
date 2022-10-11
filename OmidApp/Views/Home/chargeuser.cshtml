@@ -1,0 +1,27 @@
+<div class="page-content-wrapper">
+
+<div class="page-content mt-3" style="margin-top: 7px !important;">
+   <br>
+   @if (TempData["msg"] != null)
+   {
+       <div class="alert alert-danger m-3">
+           @TempData["msg"]
+       </div>
+   }
+   
+   <form action="/home/chargeproccess" method="post" class="m-3  mt-1 p-3" style="background-color: whitesmoke ;">
+    <p class="alert alert-primary form-control text-center">@ViewBag.User.FirstAndLastName</p>
+    <p class="alert alert-primary form-control text-center">@ViewBag.User.Phone</p>
+    <input name="txt"  required class="form-control p-3" type="number" placeholder="مبلغ شارژ رو وارد کنید">
+    <button class="btn btn-primary form-control p-2 mt-3">انجام شارژ</button>
+   </form>
+
+
+     
+
+
+
+
+</div>
+
+</div>

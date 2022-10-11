@@ -1,0 +1,50 @@
+@model VmUser
+ <form action="/user/EditProfile" method="post" enctype="multipart/form-data">
+<div class="page-content-wrapper">
+      <div class="container">
+        <!-- Profile Wrapper-->
+        <div class="profile-wrapper-area py-3">
+          <!-- User Information-->
+          <div class="card user-info-card">
+            <div class="card-body p-4 d-flex  text-center text-white">
+              تنظیمات پروفایل
+            </div>
+          </div>
+          <!-- User Meta Data-->
+          <div class="card user-data-card">
+            <div class="card-body">
+             
+
+                <div class="mb-3">
+                  <div class="title mb-2"><i class="fa-solid fa-user"></i><span>نام و نام خانوادگی</span></div>
+                  <input class="form-control" type="text" asp-for="FirstAndLastName"requaried>
+                </div>
+                <div class="mb-3">
+                  <div class="title mb-2"><i class="fa-solid fa-phone"></i><span>تلفن</span></div>
+                  <input  class="form-control" type="text" asp-for="Phone" readonly>
+                </div>
+                <div class="mb-3">
+                  <div class="title mb-2"><i class="fa-solid fa-envelope"></i><span>آدرس ایمیل</span></div>
+                  <input class="form-control" type="email" asp-for="Email" >
+                </div>
+                @* <div class="mb-3">
+                  <div class="title mb-2"><i class="fa-solid fa-envelope"></i><span>شماره کارت </span></div>
+                  <input class="form-control" type="number" asp-for="Cart" >
+                </div> *@
+
+                <button class="btn btn-success w-100" type="submit">همه اطلاعات را ذخیره کنید</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</form>
+
+
+
+
+
+

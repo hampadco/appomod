@@ -1,0 +1,35 @@
+<div class="page-content-wrapper">
+
+<div class="page-content mt-3" style="margin-top: 7px !important;">
+   <br>
+   <form action="/home/charge" method="post" class="m-3  mt-1 p-3" style="background-color: whitesmoke ;">
+    <input name="txt" required class="form-control p-3" type="text" placeholder="شماره تلفن را وارد کنید ">
+    <button class="btn btn-primary form-control p-2 mt-3">جستجو</button>
+   </form>
+
+
+     @foreach (var item in ViewBag.User)
+                {
+
+                <div class="row m-3">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                            <p class="card-title">  نام  کاربر : @item.FirstAndLastName </p>
+                            <p class="card-text">    شماره تماس:   @item.Phone </p>
+                            
+                               <a href="/home/chargeuser/@item.Id" class="form-control btn btn-success">شارژ حساب </a>
+                                
+                                         </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                }
+
+
+
+
+</div>
+
+</div>

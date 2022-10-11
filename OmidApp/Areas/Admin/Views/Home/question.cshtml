@@ -1,0 +1,174 @@
+@model VmMainQuestion
+<style>
+    th, td, tr {
+        padding: 5px;
+        text-align: center !important;
+        white-space: nowrap;
+        
+    }
+</style>
+        <div class="page-body">
+
+            <!-- Container-fluid starts-->
+            <div class="container-fluid">
+                <div class="page-header">
+                   
+                </div>
+            </div>
+
+
+             
+
+
+
+
+
+                 
+                    <div class="col-xl-12 xl-100">
+                        
+                        <div class="card">
+                            <div class="card-header">
+                               
+                               <form action="/admin/home/addquestion" method="post" class="row">
+
+                                <div class="col-xxl-12 col-xl-12 col-md-12 col-lg-12 col-12 mt-1">
+                                    <input asp-for="Questinon" required type="text" class="form-control" placeholder="روی سوال">
+                                </div>
+                                <div class="col-xxl-3 col-xl-3 col-md-3 col-lg-3 col-12 mt-1">
+                                    <input asp-for="Answer1" required type="text" class="form-control" placeholder="گزینه اول ">
+                                </div>
+                                 <div class="col-xxl-3 col-xl-3 col-md-3 col-lg-3 col-12 mt-1">
+                                    <input asp-for="Answer2" required type="text" class="form-control" placeholder="گزینه دوم ">
+                                </div>
+
+                                 <div class="col-xxl-3 col-xl-3 col-md-3 col-lg-3 col-12 mt-1">
+                                    <input asp-for="Answer3" required type="text" class="form-control" placeholder="گزینه سوم ">
+                                </div>
+                                 <div class="col-xxl-3 col-xl-3 col-md-3 col-lg-3 col-12 mt-1">
+                                    <input asp-for="Answer4" required type="text" class="form-control" placeholder=" گزینه چهارم">
+                                </div>
+                                 <div class="col-xxl-3 col-xl-3 col-md-3 col-lg-3 col-12 mt-1">
+                                    <input asp-for="CorrectAnswer" required type="number" class="form-control" placeholder="گزینه درست ">
+                                </div>
+                                <div class="col-xxl-3 col-xl-3 col-md-3 col-lg-3 col-12 mt-1" style="display: none;">
+                                    <input asp-for="Id"  type="number" class="form-control" >
+                                </div>
+                                 <div class="col-xxl-3 col-xl-3 col-md-3 col-lg-3 col-12 mt-1">
+                                    <button  class="form-control btn btn-success">ذخیره کردن</button>
+                                </div>
+
+
+
+                               </form>
+
+                          
+
+
+
+      
+                            </div>
+                            <div class="card-body">
+                                    <form action="/admin/home/question" method="post">
+                                   <div class="row justify-content-center  p-3" >
+
+                                            <div class="col-xxl-6 col-lg-6 col-xl-6 col-md-6 col-12">
+                                                <input name="txt" class="form-control" type="text" placeholder="جستجو در عنوان سوال">
+                                            
+
+                                            </div>
+
+                                            <div class="col-xxl-2 col-lg-2 col-xl-2 col-md-2 col-12 mt-1 ">
+                                                <button type="submit" class="btn btn-primary form-control">جستجو</button>
+
+                                            </div>
+
+                                    </div>
+                               </form>
+                                <div class="user-status table-responsive latest-order-table">
+                                      <table class="table table-bordernone">
+                         <thead>
+
+                             <tr>
+                                <td scope="col">شماره  سوال</td>
+                                <td scope="col">عنوان سوال  </td>
+                                <td scope="col">گزینه اول   </td>
+                                <td scope="col">گزینه دوم </td>
+                                <td scope="col">گزینه سوم   </td>
+                                <td scope="col">گزینه چهارم   </td>
+                                @* <td scope="col">نوع عملیات</td> *@
+                                <td scope="col"> گزینه صحیح </td>
+                                
+                                <td scope="col">  عملیات </td>
+                                @* <td scope="col">عملیات</td> *@
+                               </tr>
+                           
+
+                        </thead>
+                        <tbody>
+                            @if(ViewBag.question != null){
+                               
+                             @foreach (var item in ViewBag.question)
+                            {
+                                <tr>
+                               
+                                <td class="font-danger">@item.QuestionNumber </td>
+                                <td class="digits"> @item.Questinon</td>
+                                <td class="digits"> @item.Answer1</td>
+                                 <td class="font-danger">@item.Answer2 </td>
+                                <td class="digits"> @item.Answer3</td>
+                                <td class="digits"> @item.Answer4</td>
+                                <td class="digits"> @item.CorrectAnswer</td>
+                                 <td class="digits">
+                                      <a  href="/admin/home/delete?id=@item.Id" onclick="return confirm('از حذف مطمن هستید؟')">حذف</a>
+                                      <a  href="/admin/home/question?id=@item.Id">ویرایش</a>
+
+                                 </td>
+                                 
+
+                                </tr>
+
+                                
+                               
+                             }
+                            }
+                           
+                         
+                        </tbody>
+
+                        <div class="text-left">
+                            @{
+                                int page = ViewBag.Number;
+
+                                int next=page+1;
+                                int prev=1;
+                                @if (page > 1)
+                                {
+                                     prev=page-1;
+                                }
+                                
+                                
+                                
+                            }
+                             
+                            <a class="ml-1" href="/admin/home/question?page=@prev">قبلی</a>
+                             <a class="" href="/admin/home/question?page=@next">بعدی</a>
+                        </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                     
+
+                </div>
+            </div>
+            <!-- Container-fluid Ends-->
+                      
+        </div>
+
+
+                     
+
+
+
+  

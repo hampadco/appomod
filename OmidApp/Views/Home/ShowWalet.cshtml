@@ -1,0 +1,69 @@
+<div class="page-content-wrapper">
+
+<div class="page-content mt-3" style="margin-top: 7px !important;">
+  
+       
+    @if (ViewBag.ListWalet != null)
+    {
+           <br/>
+                    
+                 <p class="alert alert-warning  p-3 m-3 text-center ">   موجودی فعلی: @User.FindFirst("walet").Value تومان       </p>
+                 <div class="row m-3">
+                                     <a href="/home/walet" class="btn btn-primary form-control text-center p-3   ml-3" >درخواست شارژ حساب</a>
+
+
+                 </div>
+                @foreach (var item in ViewBag.ListWalet)
+                {
+
+                <div class="row m-3">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                            <p class="card-title"> واریز کننده : @item.sendername </p>
+                            <p class="card-text">   شماره تماس واریز کننده:  @item.senderphone </p>
+                               <p class="card-text">   بابت:  @item.babat </p>
+                                <p class="card-text">   واریز به نام:  @item.resivername </p>
+                                    <p class="card-text">   واریز به شماره تلفن:  @item.resiverphone </p>
+
+                                <p class="card-text">   نوع عملیات : 
+                                    @if (item.resiverphone == ViewBag.tel)
+                                    {
+                                        <span class="badge badge-success p-3">واریز</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge badge-danger p-3">برداشت</span>
+                                    }
+                                    
+                                     </p>
+                                  <p class="card-text">    مبلغ   :  @item.variz </p>
+                                  
+                             
+                                  <p class="card-text">   تاریخ عملیات:  @item.tarikh </p>
+                                         </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                }
+    }
+    else{
+        <br/>
+       
+
+
+         <p class="alert alert-danger p-3 m-3 text-center mt-7">تراکنشی ثبت نشده است  </p>
+                
+               
+                    
+               
+
+    }
+
+
+
+
+</div>
+
+</div>

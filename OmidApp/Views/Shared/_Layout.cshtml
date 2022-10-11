@@ -1,0 +1,279 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, shrink-to-fit=no">
+  <meta name="description" content="Suha - Multipurpose Ecommerce Mobile HTML Template">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#100DD1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- The above tags *must* come first in the head, any other head content must come *after* these tags -->
+  <!-- Title -->
+  <title> امیداپ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="/img/icons/icon-72x72.png">
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/icons/icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="/img/icons/icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/icon-180x180.png">
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="/css/all.min.css">
+  <link rel="stylesheet" href="/css/brands.min.css">
+  <link rel="stylesheet" href="/css/solid.min.css">
+  <link rel="stylesheet" href="/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="/css/magnific-popup.css">
+  <link rel="stylesheet" href="/css/nice-select.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/style.css">
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="/manifest.json">
+   @* icon *@
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <!-- Preloader-->
+  <div class="preloader" id="preloader">
+    <div class="spinner-grow text-secondary" role="status">
+      <div class="sr-only"></div>
+    </div>
+  </div>
+  <header>
+  <!-- Header Area -->
+  <div class="header-area" id="headerArea">
+    <div class="container h-100 d-flex align-items-center justify-content-between d-flex rtl-flex-d-row-r">
+      <!-- Logo Wrapper -->
+      <div class="logo-wrapper"><a href="/home/home"><img src="/img/core-img/logo-small.png" alt=""></a></div>
+      <div class="navbar-logo-container d-flex align-items-center">
+        <!-- Cart Icon -->
+        @* <div class="cart-icon-wrap"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i><span>2</span></a></div> *@
+        <!-- User Profile Icon -->
+        @* <div class="user-profile-icon ms-2"><a href="/user/profile">
+        <img src="/img/bg-img/9.jpg" alt=""></a></div> *@
+        <!-- Navbar Toggler -->
+        <div class="suha-navbar-toggler ms-2" data-bs-toggle="offcanvas" data-bs-target="#suhaOffcanvas"
+          aria-controls="suhaOffcanvas">
+          <div><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="offcanvas offcanvas-start suha-offcanvas-wrap" tabindex="-1" id="suhaOffcanvas"
+    aria-labelledby="suhaOffcanvasLabel">
+    <!-- Close button-->
+    <button class="btn-close btn-close-white" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <!-- Offcanvas body-->
+    <div class="offcanvas-body">
+      <!-- Sidenav Profile-->
+      <div class="sidenav-profile">
+        <div class="user-profile shadow"><img src="/img/core-img/logo-white.png" alt=""></div>
+        <div class="user-info">
+          <h5 class="user-name mb-1 text-white">@User.Identity.Name </h5>
+          <p class="available-balance text-white"> موجودی <span class="counter">@User.FindFirst("walet").Value</span> <span>تومان</span> </p>
+        </div>
+      </div>
+      <!-- Sidenav Nav-->
+      <ul class="sidenav-nav ps-0">
+        <li><a href="/user/profile"><i class="fa-solid fa-user"></i>پروفایل من</a></li>
+        </li>
+        <li><a href="/home/quiz"><i class="fa-solid fa-bell lni-tada-effect"></i>شرکت در مسابقه
+        </a></li>
+
+               <li><a href="/home/viewrate"><i class="fa-solid fa-file-code"></i> مشاهده امتیازات 
+              </a></li>
+      
+        <li><a href="/home/ShowWalet"><i class="fa-solid fa-file-code"></i> کیف پول </a></li>
+
+         @if ( User.FindFirst("cart").Value != "0")
+        {
+                  <li><a href="/home/charge"><i class="fa-solid fa-wallet"></i>شارژ حساب کاربران</a></li>
+                  
+
+        }
+       
+        <li><a href="/phone/logout"><i class="fa-solid fa-toggle-off"></i>خروج از سیستم</a></li>
+       
+           
+
+       
+      </ul>
+    </div>
+  </div>
+  </header>
+ 
+           
+  <main>
+  
+  
+    
+     @RenderBody()
+  </main>
+    <!-- Internet Connection Status-->
+  <div class="internet-connection-status" id="internetStatus"></div>
+  <footer>
+     <!-- Footer Nav-->
+  <div class="footer-nav-area" id="footerNav">
+    <div class="suha-footer-nav">
+      <ul class="h-100 d-flex align-items-center justify-content-between ps-0 d-flex rtl-flex-d-row-r">
+        <li><a href="/home/home"><i class="fa-solid fa-house"></i>خانه</a></li>
+
+        <li><a href="/home/ShowWalet"><i class="fa-solid fa-bag-shopping"></i> کیف پول</a></li>
+
+        <li><a href="/home/aboutus"><i class="fa-solid fa-heart"></i>درباره ما</a></li>
+      </ul>
+    </div>
+  </div>
+  </footer>
+ 
+  <!-- All JavaScript Files-->
+  <script src="/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/waypoints.min.js"></script>
+  <script src="/js/jquery.easing.min.js"></script>
+  <script src="/js/owl.carousel.min.js"></script>
+  <script src="/js/jquery.magnific-popup.min.js"></script>
+  <script src="/js/jquery.counterup.min.js"></script>
+  <script src="/js/jquery.countdown.min.js"></script>
+  <script src="/js/jquery.passwordstrength.js"></script>
+  <script src="/js/jquery.nice-select.min.js"></script>
+  <script src="/js/theme-switching.js"></script>
+  <script src="/js/no-internet.js"></script>
+  <script src="/js/active.js"></script>
+  <script src="/js/pwa.js"></script>
+
+@* countdown time *@
+<script>
+  
+const FULL_DASH_ARRAY = 283;
+const WARNING_THRESHOLD = 10;
+const ALERT_THRESHOLD = 5;
+
+const COLOR_CODES = {
+  info: {
+    color: "green"
+  },
+  warning: {
+    color: "orange",
+    threshold: WARNING_THRESHOLD
+  },
+  alert: {
+    color: "red",
+    threshold: ALERT_THRESHOLD
+  }
+};
+
+const TIME_LIMIT = 15;
+let timePassed = 0;
+let timeLeft = TIME_LIMIT;
+let timerInterval = null;
+let remainingPathColor = COLOR_CODES.info.color;
+
+document.getElementById("app").innerHTML = `
+<div class="base-timer">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+      <path
+        id="base-timer-path-remaining"
+        stroke-dasharray="283"
+        class="base-timer__path-remaining ${remainingPathColor}"
+        d="
+          M 50, 50
+          m -45, 0
+          a 45,45 0 1,0 90,0
+          a 45,45 0 1,0 -90,0
+        "
+      ></path>
+    </g>
+  </svg>
+  <span id="base-timer-label" class="base-timer__label">${formatTime(
+    timeLeft
+  )}</span>
+</div>
+`;
+
+startTimer();
+
+function onTimesUp() {
+  clearInterval(timerInterval);
+}
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timePassed = timePassed += 1;
+    timeLeft = TIME_LIMIT - timePassed;
+    document.getElementById("base-timer-label").innerHTML = formatTime(
+      timeLeft
+    );
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+
+    if (timeLeft === 0) {
+      onTimesUp();
+    }
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+function setRemainingPathColor(timeLeft) {
+  const { alert, warning, info } = COLOR_CODES;
+  if (timeLeft <= alert.threshold) {
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(warning.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(alert.color);
+  } else if (timeLeft <= warning.threshold) {
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(info.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(warning.color);
+  }
+}
+
+function calculateTimeFraction() {
+  const rawTimeFraction = timeLeft / TIME_LIMIT;
+  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+}
+
+function setCircleDasharray() {
+  const circleDasharray = `${(
+    calculateTimeFraction() * FULL_DASH_ARRAY
+  ).toFixed(0)} 283`;
+  document
+    .getElementById("base-timer-path-remaining")
+    .setAttribute("stroke-dasharray", circleDasharray);
+}
+
+</script>
+ 
+
+
+
+</body>
+
+</html>

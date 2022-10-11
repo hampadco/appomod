@@ -1,0 +1,142 @@
+<style>
+    th, td, tr {
+        padding: 5px;
+        text-align: center !important;
+    }
+</style>
+        <div class="page-body">
+
+            <!-- Container-fluid starts-->
+            <div class="container-fluid">
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="page-header-left">
+                                <h3>داشبورد
+                                    <small>پنل مدیریت چندکاره</small>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <ol class="breadcrumb pull-right">
+                                <li class="breadcrumb-item"><a href="index.html"><i data-feather="home"></i></a></li>
+                                <li class="breadcrumb-item active">داشبورد</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+             
+
+
+
+
+
+                 
+                    <div class="col-xl-12 xl-100">
+                        
+                        <div class="card">
+                            <div class="card-header">
+
+                              <form action="/admin/home/Participantsscore" method="post">
+                                   <div class="row justify-content-center  p-3" >
+
+                                            <div class="col-xxl-6 col-lg-6 col-xl-6 col-md-6 col-12">
+                                                <input name="txt" class="form-control" type="text" placeholder="نمونه تاریخ :1401/07/07">
+                                            
+
+                                            </div>
+
+                                            <div class="col-xxl-2 col-lg-2 col-xl-2 col-md-2 col-12 mt-1 ">
+                                                <button type="submit" class="btn btn-primary form-control">جستجو</button>
+
+                                            </div>
+
+                                    </div>
+                               </form>
+
+
+
+                                <h5>   امتیازات کاربران - تعداد:
+                                     @if (ViewBag.User != null)
+                                            {
+                                                 @ViewBag.User.Count
+                                            }else{
+                                               <Span>0</Span>
+                                            }
+</h5>
+
+  @* search *@
+
+                                @* <div class="card-header-right">
+                                    <ul class="list-unstyled card-option">
+                                        <li><i class="icofont icofont-simple-left"></i></li>
+                                        <li><i class="view-html fa fa-code"></i></li>
+                                        <li><i class="icofont icofont-maximize full-card"></i></li>
+                                        <li><i class="icofont icofont-minus minimize-card"></i></li>
+                                        <li><i class="icofont icofont-refresh reload-card"></i></li>
+                                        <li><i class="icofont icofont-error close-card"></i></li>
+                                    </ul>
+                                </div> *@
+                            </div>
+                            <div class="card-body">
+                                <div class="user-status table-responsive latest-order-table">
+                                    <table class="table table-bordernone">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">ردیف </th>
+                                            <th scope="col"> نام و نام خانوادگی</th>
+                                            <th scope="col">شماره تماس </th>
+                                            <th scope="col">تاریخ</th>
+                                            <th scope="col">امتیاز</th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            @if (ViewBag.User != null)
+                                            {
+                                                int i=1;
+                                            
+
+
+                                            @foreach (var item in ViewBag.User)
+                                            {
+                                                    <tr>
+                                                        <td>@i</td>
+                                                        <td class="digits">@item.Fullname</td>
+                                                        <td class="font-danger"> @item.Phone 	</td>
+                                                        <td class="digits"> 
+                                                            @item.Tarikh
+                                                        </td>
+                                                        <td class="digits"> 
+                                                            @if (item.Rate>0)
+                                                            {
+                                                                <p class="alert alert-success form-control text-center" dir="ltr">@item.Rate</p>
+                                                                
+                                                            }
+                                                            else
+                                                            {
+                                                                <p class="alert alert-danger form-control text-center" dir="ltr">@item.Rate</p>
+                                                            }
+                                                           
+                                                        </td>
+                                                   
+                                                    </tr>
+                                                     i++;
+                                            }
+                                        }
+                                        
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Container-fluid Ends-->
+
+        </div>
+
+  
