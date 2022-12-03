@@ -1,5 +1,5 @@
 @{
-    Layout=null;
+  Layout = null;
 
 }
 <!DOCTYPE html>
@@ -44,127 +44,185 @@
 
 <body>
   <!-- Preloader-->
- 
+
   <!-- Login Wrapper Area-->
-  <div class="login-wrapper d-flex align-items-center justify-content-center text-center" >
+  <div class="login-wrapper d-flex align-items-center justify-content-center text-center">
     <!-- Background Shape-->
     <div class="background-shape"></div>
-    <div class="container" >
-      <div class="row justify-content-center" >
+    <div class="container ">
+      <div class="row justify-content-center border">
         <div class="col-10 col-lg-8"><img class="big-logo" src="img/core-img/logo-white.png" alt="">
+
+        @if (TempData["error"] != null)
+        {
+          <div class="alert alert-danger text-dark" role="alert">
+            @TempData["error"]
+          </div>
+        }
+
+        @if (TempData["success"] != null)
+        {
+          <div class="alert alert-success" role="alert">
+            @TempData["success"]
+          </div>
+        }
+
+        
+        
+
+     
+          <div class="mt-1" id="menu">
+
+             <button onclick="login()" class="btn btn-warning form-control m-1 text-white">ورود به حساب کاربری</button>
+
+
+            <button onclick="register()" class="btn btn-warning form-control m-1 text-white">ثبت نام</button>
+
+          </div>
+
+
           <!-- Register Form-->
-          <div class=" mt-5" style="border:1px solid black;padding: 5px;border:5px;" id="m" >
-            <form action="/phone/check" method="post" id="Myform">
-              <div class="form-group text-start mb-4"><span> <i class="fa-solid fa-user"></i>   شماره موبایل خود را وارد کنید </span> <br>
-               
-                <input  required style="margin-top:20px ;"  autocomplete="off"  class="form-control text-black" type="number" style="" placeholder="شماره موبایل خود را وارد کنید" id="phone" name="phone">
+          <div class=" mt-1"  id="register" style="display: none;">
+            <form action="/phone/check" method="post" id="Myform" >
+            <p id="msg" class="alert alert-danger d-none"> لطفا شماره تلفن و تیک قوانین را بزنید</p>
+
+             <div class="form-group text-start mb-4">
+
+                <input required style="margin-top:20px ;" autocomplete="off" class="form-control text-black"
+                  type="text" style="" placeholder="نام و نام خانوادگی خود را وارد کنید"  name="name">
               </div>
-              @* <div class="form-group text-start mb-4"><span>کلمه عبور</span>
-                <label for="password"><i class="fa-solid fa-key"></i></label>
-                <input class="form-control" id="password" type="password" placeholder="کلمه عبور">
-              </div> *@
-              <a onclick="show()" class="btn btn-warning btn-lg w-100"   >ارسال کد فعالسازی</a>
+
+
+              <div class="form-group text-start mb-4">
+
+                <input required style="margin-top:20px ;" autocomplete="off" class="form-control text-black"
+                  type="number" style="" placeholder="شماره موبایل خود را وارد کنید"  name="phone">
+              </div>
+
+               <div class="form-group text-start mb-4">
+
+                <input required style="margin-top:20px ;" autocomplete="off" class="form-control text-black"
+                  type="password" style="" placeholder="رمز عبور خود را وارد کنید"  name="password">
+              </div>
+
+
+
+              <div class="form-check m-3 " style="margin-right:0px ;">
+                <input required style="width:20px ; height: 20px;"  class="form-check-input" type="checkbox"  id="rule">
+                <label class="form-check-label" for="flexCheckDefault">
+                  <a href="/phone/rule">قوانین و مقررات</a> را خوانده و قبول دارم.
+                </label>
+              </div>
+              <button type="submit" class="btn btn-warning btn-lg w-100">ثبت نام </button>
+                            <a onclick="back()" class="btn btn-link btn-lg w-100"> بازگشت </a>
+
+            </form>
+          </div>
+
+          @* login *@
+          <div class="mt-1"  id="login" style="display:none;">
+            <form action="/phone/loginme" method="post" id="Myform" >
+
+             
+
+
+              <div class="form-group text-start mb-4">
+
+                <input required style="margin-top:20px ;"  class="form-control text-black"
+                  type="number" style="" placeholder="شماره موبایل خود را وارد کنید"  name="phone">
+              </div>
+
+               <div class="form-group text-start mb-4">
+
+                <input required style="margin-top:20px ;"  class="form-control text-black"
+                  type="password" style="" placeholder="رمز عبور خود را وارد کنید"  name="password">
+              </div>
+
+
+
+         
+              <button type="submit" class="btn btn-warning btn-lg w-100">ورود   </button>
+               <a onclick="back()" class="btn btn-link btn-lg w-100 "> بازگشت </a>
+
             </form>
           </div>
 
 
+
+
+
+
+
           <div class="text-center" id="load" style="display: none;">
 
-                <img src="/img/core-img/loading.gif" alt="">
-                <b class="text-center mt-3">درحال بارگذاری...</b>
+            <img src="/img/core-img/loading.gif" alt="">
+            <b class="text-center mt-3">درحال بارگذاری...</b>
 
-            </div>
-          
-         
+          </div>
+
+
         </div>
-           
+
       </div>
     </div>
-    
+
   </div>
 
-  
-<script src="/js/jquery.min.js"></script>
+
+  <script src="/js/jquery.min.js"></script>
   <script>
-                   function show() {
-                              var phone = document.getElementById("phone").value;
-                            if (phone != "") {
-                                document.getElementById("m").style.display = "none";
-                              document.getElementById("load").style.display = "block";
-                              document.getElementById('Myform').submit();
-                     
-                           } }
-                      
-                        
-                        
-                     
- 
-      
-                          
+    function show() {
+      debugger
+      var phone = document.getElementById("phone").value;
+      //rule is checked and phone is not empty
+      if (document.getElementById("rule").checked && phone != "") {
+        document.getElementById("m").style.display = "none";
+        document.getElementById("load").style.display = "block";
+        document.getElementById("Myform").submit();
+      }
+      else {
+        document.getElementById("msg").classList.remove("d-none");
+      }
 
-                      // code by divice id in web
-                       @* var url = new URL(window.location.href);
-                        const product = "ok";
-                      
-                    
-                        var machineId = localStorage.getItem('MachineId');
-          
-                        if (!machineId) {
-                                    machineId = crypto.randomUUID();
-                                    localStorage.setItem('MachineId', machineId);
-                                    
-                                }
-                       
-                       
-
-                        if (product != "disable") {
-                   
-                             
-                              $.ajax({
-                                    url: '/phone/checkdivace?deviceid=' + machineId,
-                                    
-                                    type: 'POST',
-                                }).done(function (res) {
-                                      if (res === 'success') {
-                                             window.location.href="/home/home"
-                                      }
-                                      else if (res === 'faild') {
-                                          document.getElementById("m").style.display = "block";
-                                           document.getElementById("load").style.display = "none"; 
-                                      }
-                                  });
-                        }else
-                        {
-
-
-                        
-
-                            $.ajax({
-                                      type: 'POST',
-                                      url: '/phone/deactivedevice?deviceid=' + machineId,
-                                      
-                              
-                                          
-                                });
-
-                                       document.getElementById("m").style.display = "block";
-                                           document.getElementById("load").style.display = "none"; 
-                                                
-                              
+     
+    }
 
 
 
-                        } *@
 
-                              
-                           
 
-      
+
+
+
+    function register() {
+      document.getElementById("menu").style.display = "none";
+      document.getElementById("register").style.display = "block";
+       document.getElementById("login").style.display = "none";
+
+    }
+
+    function login() {
+      document.getElementById("menu").style.display = "none";
+      document.getElementById("login").style.display = "block";
+      document.getElementById("register").style.display = "none";
+    }
+
+    function back() {
+      document.getElementById("menu").style.display = "block";
+      document.getElementById("login").style.display = "none";
+      document.getElementById("register").style.display = "none";
+    }
+
+
+
+
+
+
   </script>
 
-  
 
-  
+
+
 </body>
 
 </html>

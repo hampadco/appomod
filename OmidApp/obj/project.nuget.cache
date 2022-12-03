@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8lRsEsdg7T+YAXDVpNit5oClr4V1MiGEvn3Ae2i6lRkmPUo/wbsHr6h6D49oB+qErw8OrW8O2w+GxTtwotTYTw==",
+  "dgSpecHash": "y+wLYp1Szt/r2Ps8bPkDVaquHKQMxSG1eRpXLOH9zPeuWfQkIxtS2hc+uGLBkrPvmdgzYrkgfInbH3DAL0U+sw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\apple\\Desktop\\appomid\\OmidApp\\OmidApp.csproj",
+  "projectFilePath": "C:\\Users\\apple\\Desktop\\appomid\\OmidApp\\OmidApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\apple\\.nuget\\packages\\kavenegar\\1.2.4\\kavenegar.1.2.4.nupkg.sha512",
     "C:\\Users\\apple\\.nuget\\packages\\microsoft.aspnetcore.hosting\\2.2.7\\microsoft.aspnetcore.hosting.2.2.7.nupkg.sha512",
@@ -91,7 +91,11 @@
     "C:\\Users\\apple\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\apple\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
     "C:\\Users\\apple\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\apple\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
+    "C:\\Users\\apple\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\apple\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.11\\microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\apple\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.11\\microsoft.windowsdesktop.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\apple\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.11\\microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\apple\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.11\\microsoft.netcore.app.host.win-x64.6.0.11.nupkg.sha512"
   ],
   "logs": []
 }

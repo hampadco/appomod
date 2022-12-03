@@ -44,6 +44,9 @@ public class HomeController : Controller
     var user=dbuser.ShowUser(Convert.ToInt32(id));
     if (!dbWalet.CheckMojodi(user.Phone) )
     {
+      //update claim wallet
+      
+
       return RedirectToAction("walet","home");
     }
     else
@@ -57,7 +60,7 @@ public class HomeController : Controller
         return RedirectToAction("countpage","home");
       }
        
-    }
+     }
 
     
 
@@ -196,20 +199,18 @@ public class HomeController : Controller
           var principal = new ClaimsPrincipal(identity);
           await HttpContext.SignInAsync(principal);
 
-          
-          
-          
-  
-
-          
-        
-          
-          
-  
-  
-  
-  
-  
-
 }
+
+
+public IActionResult send()
+{
+    // TODO: Your code here
+    return View();
+}
+
+
+
+
+
+
 }

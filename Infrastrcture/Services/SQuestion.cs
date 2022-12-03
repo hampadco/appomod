@@ -160,16 +160,28 @@ public class SQuestion : IQuestion
     public int GetFinalQuestion(string userId)
     {
         Random n = new Random();
-        int lastid=db.MainQuestions.Count();
+        int finalid=db.MainQuestions.OrderByDescending(x => x.Id).FirstOrDefault().QuestionNumber;
+        int firstid=db.MainQuestions.FirstOrDefault().QuestionNumber;
         int random;
         do
         {
-            random=n.Next(1,lastid);
+            random=n.Next(firstid,finalid);
         } while (db.answers.Any(x=>x.QuestionNumber==random && x.UserId==Convert.ToInt32(userId)));
 
-        var question=db.MainQuestions.Where(x=>x.QuestionNumber==random).SingleOrDefault();
+        if (db.MainQuestions.Any(x=>x.QuestionNumber==random))
+        {
+             var question=db.MainQuestions.Where(x=>x.QuestionNumber==random).SingleOrDefault();
+             return question.QuestionNumber;
+        }else
+        {
+         
+             var question=db.MainQuestions.Where(x=>x.QuestionNumber==finalid).SingleOrDefault();
+             return question.QuestionNumber;
+        }
 
-        return question.QuestionNumber;
+       
+
+       
     }
 
     public List<Vmresult> ShowResult()

@@ -5,164 +5,173 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OmidApp
 build_property.RootNamespace = OmidApp
-build_property.ProjectDir = c:\Users\apple\Desktop\appomid\OmidApp\
+build_property.ProjectDir = C:\Users\apple\Desktop\appomid\OmidApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = c:\Users\apple\Desktop\appomid\OmidApp
+build_property.MSBuildProjectDirectory = C:\Users\apple\Desktop\appomid\OmidApp
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/agent.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/agent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxhZ2VudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/bag.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/bag.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxiYWcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/deatils.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/deatils.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxkZWF0aWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/Index.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/info.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/info.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxpbmZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/login.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxsb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/Participantsscore.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/Participantsscore.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxQYXJ0aWNpcGFudHNzY29yZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/Paystatus.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/Paystatus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxQYXlzdGF0dXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/question.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/question.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxxdWVzdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/setting.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/setting.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxzZXR0aW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/walet.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/walet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVx3YWxldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/waletall.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Home/waletall.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVx3YWxldGFsbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Shared/Error.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/Home/aboutus.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Home/aboutus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhYm91dHVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/Home/charge.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Home/charge.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjaGFyZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/Home/chargeuser.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Home/chargeuser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjaGFyZ2V1c2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/Home/countpage.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Home/countpage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjb3VudHBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/Home/Home.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Home/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/Home/load.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Home/load.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxsb2FkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/Home/Privacy.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/Home/ShowWalet.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Home/send.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzZW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Home/ShowWalet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG93V2FsZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/Home/ViewRate.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Home/ViewRate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaWV3UmF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/Home/walet.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Home/walet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx3YWxldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/Login/ForgetPassword.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Login/ForgetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRm9yZ2V0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/Login/Success.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Login/Success.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cU3VjY2Vzcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/Phone/check.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Phone/check.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmVcY2hlY2suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/Phone/login.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Phone/login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmVcbG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/Question/question.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Phone/rule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmVccnVsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Question/question.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25ccXVlc3Rpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/Shared/Error.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/User/profile.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/User/profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxwcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/_ViewImports.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/_ViewStart.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Shared/_Layout.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-bfjyxio1vt
 
-[c:/Users/apple/Desktop/appomid/OmidApp/Views/Shared/_Layout.cshtml]
+[C:/Users/apple/Desktop/appomid/OmidApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-mw7wfe1at6

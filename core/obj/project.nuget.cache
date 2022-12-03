@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UMEuwsiF4uSRsMXPEXFq/KDs13ZwdRMQUDIhLoQekRp6/1ja1LGLJjfCoAaamkzVMjqCI3I8DiPVJPOPW0iI2g==",
+  "dgSpecHash": "R8imwThwXtCaltevMfZSk/xEQQDWoLjAyaojbz9GeOzNjYqugOoeJTjlsS6O0pska4TN63RYqFc8vNIGKOVySA==",
   "success": true,
   "projectFilePath": "C:\\Users\\apple\\Desktop\\appomid\\core\\core.csproj",
   "expectedPackageFiles": [
@@ -17,7 +17,10 @@
     "C:\\Users\\apple\\.nuget\\packages\\system.componentmodel.annotations\\4.5.0\\system.componentmodel.annotations.4.5.0.nupkg.sha512",
     "C:\\Users\\apple\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
     "C:\\Users\\apple\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
-    "C:\\Users\\apple\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
+    "C:\\Users\\apple\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
+    "C:\\Users\\apple\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.11\\microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\apple\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.11\\microsoft.windowsdesktop.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\apple\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.11\\microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512"
   ],
   "logs": []
 }

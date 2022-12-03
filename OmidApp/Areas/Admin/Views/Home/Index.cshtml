@@ -87,6 +87,7 @@
                                 <td scope="col">کیف پول</td>
                                 <td scope="col">جزئیات مسابقه</td>
                                 <td scope="col">تبدیل به نماینده</td>
+                                <td scope="col">ویژه</td>
                                </tr>
                            
 
@@ -117,6 +118,22 @@
                                                             {
                                                                 <a href="/admin/home/agentinfo/@item.Id" class="btn btn-danger form-control">
                                                                 <span >کاربر عادی</span>
+                                                                </a>
+                                                            }
+                                </td>
+
+                                <td class="font-danger">
+                                     @if (item.Url == "vige")
+                                                            {
+                                                                <a href="/admin/home/vige/@item.Id" class="btn btn-success form-control">
+                                                                             <span >ویژه</span>
+
+                                                                </a>
+                                                            }
+                                                            else
+                                                            {
+                                                                <a href="/admin/home/vige/@item.Id" class="btn btn-danger form-control">
+                                                                <span > عادی</span>
                                                                 </a>
                                                             }
                                 </td>

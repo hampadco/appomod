@@ -782,3 +782,8 @@ C:\Users\apple\Desktop\appomid\OmidApp\obj\Debug\net6.0\refint\OmidApp.dll
 C:\Users\apple\Desktop\appomid\OmidApp\obj\Debug\net6.0\OmidApp.pdb
 C:\Users\apple\Desktop\appomid\OmidApp\obj\Debug\net6.0\OmidApp.genruntimeconfig.cache
 C:\Users\apple\Desktop\appomid\OmidApp\obj\Debug\net6.0\ref\OmidApp.dll
+C:\Users\apple\Desktop\appomid\OmidApp\obj\Debug\net6.0\staticwebassets\msbuild.OmidApp.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\apple\Desktop\appomid\OmidApp\obj\Debug\net6.0\staticwebassets\msbuild.build.OmidApp.props
+C:\Users\apple\Desktop\appomid\OmidApp\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.OmidApp.props
+C:\Users\apple\Desktop\appomid\OmidApp\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.OmidApp.props
+C:\Users\apple\Desktop\appomid\OmidApp\obj\Debug\net6.0\staticwebassets.pack.json

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TRXS2WRV6POCkwB/otKxiTtE/NZGFIYTKMgXIEPcRs4FY2pjFPwHZgBi6cSyV8Q/3bMgALYJ+SMAvZY0vZeMMg==",
+  "dgSpecHash": "xWICUszDE/34Shd+phh3YGdIZn1JHI1olacpR/Z50Ax6lQ+//07aMSnSk7rXH3DpsDFJCTNHRabq+gHvnQQnCw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\apple\\Desktop\\appomid\\Infrastrcture\\Infrastrcture.csproj",
+  "projectFilePath": "C:\\Users\\apple\\Desktop\\appomid\\Infrastrcture\\Infrastrcture.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\apple\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\apple\\.nuget\\packages\\microsoft.aspnetcore.hosting\\2.2.7\\microsoft.aspnetcore.hosting.2.2.7.nupkg.sha512",
@@ -82,7 +82,10 @@
     "C:\\Users\\apple\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\apple\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\apple\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
-    "C:\\Users\\apple\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
+    "C:\\Users\\apple\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\apple\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.11\\microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\apple\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.11\\microsoft.windowsdesktop.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\apple\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.11\\microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512"
   ],
   "logs": []
 }

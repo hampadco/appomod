@@ -15,13 +15,16 @@ public class HomeController : Controller
    private readonly IUser dbUser;
    
    private readonly IWalet dbWalet;
+   private readonly Context _context;
 
-    public HomeController(IQuestion _db,IUser _dbUser,IWalet _dbWalet)
+    public HomeController(IQuestion _db,IUser _dbUser,IWalet _dbWalet ,Context _context)
     {
         db = _db;
         dbUser = _dbUser;
         dbWalet = _dbWalet;
+        this._context = _context;
     }
+    
  
 
   public IActionResult Index(string txt)
@@ -254,6 +257,38 @@ public class HomeController : Controller
         return RedirectToAction("question");
     }
     
+    
+
+    //vige
+    public IActionResult vige(int id)
+    {
+      var user=_context.Users.Find(id);
+      if (user.Url=="vige")
+      {
+        user.Url="";
+      }else
+      {
+        //first delete all vige
+        var q=_context.Users.Where(x=>x.Url=="vige").FirstOrDefault();
+        if (q != null)
+        {
+          q.Url="";
+          _context.Users.Update(q);
+          _context.SaveChanges();
+        }
+        
+
+        user.Url="vige";
+      }
+      
+
+     _context.Users.Update(user);
+      _context.SaveChanges();
+
+      
+      return RedirectToAction("index");
+      
+    }
     
     
     
