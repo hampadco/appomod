@@ -129,7 +129,7 @@
             <div class="d-flex justify-content-around mr-2 row p-3" style="background-color:white;">
 
                 <div class="col-12">
-                    <button type="submit" id="clickButton" class="btn btn-primary form-control ">بعدی</button>
+                    <button type="submit" id="clickButton" onclick="preventSubmit()" class="btn btn-primary form-control ">بعدی</button>
                 </div>
 
                 @* // timer *@
@@ -141,6 +141,14 @@
 </div>
 </div>
 </div>
+
+<script>
+ 
+function preventSubmit(){
+ document.getElementById("clickButton").style.display = "none";
+}
+
+</script>
 
 
 <script>
